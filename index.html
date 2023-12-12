@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MVP - Front Finanças - PUC-RJ</title>
+</head>
+
+<body>
+    <!-- Links das tabs -->
+    <div class="tab">
+        <button id="btnLancamentos" class="tablinks" onclick="openTab(event, 'Lancamentos')">Lançamentos</button>
+        <button id="btnCategorias" class="tablinks" onclick="openTab(event, 'Categorias')">Categorias</button>
+    </div>
+
+    <main>
+        <!-- Conteúdo das tabs -->
+        <div id="Lancamentos" class="tabcontent">
+
+            <div class="resumo">
+                <div>
+                    Receitas:
+                    <span id="receitasDisplay" class="receitas">R$ 0.00</span>
+                </div>
+                <div>
+                    Despesas:
+                    <span id="despesasDisplay" class="despesas">R$ 0.00</span>
+                </div>
+                <div>
+                    Total:
+                    <span id="totalDisplay" class="total">R$ 0.00</span>
+                </div>
+            </div>
+
+            <div class="novoLancamento">
+                <div class="divLancamentoDescricao">
+                    <label for="lancamentoDescricao">Descrição</label>
+                    <input type="text" id="lancamentoDescricao" />
+                </div>
+                <div class="divLancamentoCategoria">
+                    <label for="lancamentoCategoria">Categoria</label>
+                    <select id="lancamentoCategoria">
+                        <option value="0">-------</option>
+                    </select>
+                </div>
+                <div class="divLancamentoData">
+                    <label for="lancamentoData">Data</label>
+                    <input type="date" id="lancamentoData" />
+                </div>
+                <div class="divLancamentoValor">
+                    <label for="lancamentoValor">Valor</label>
+                    <input type="text" id="lancamentoValor" />
+                </div>
+                <button id="btnNovoLancamento" onclick="novoLancamento()">Incluir</button>
+            </div>
+            <div class="divLancamentosTable">
+                <table id="tabelaLancamento">
+                    <thead>
+                        <tr>
+                            <th class="colunaLancamentoDescricao">Descrição</th>
+                            <th class="colunaLancamentoCategoria">Categoria</th>
+                            <th class="colunaLancamentoData">Data</th>
+                            <th class="colunaLancamentoValor">Valor</th>
+                            <th class="colunaLancamentoAcao">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="Categorias" class="tabcontent">
+            <div class="novaCategoria">
+                <div class="divCategoriaNome">
+                    <label for="categoriaNome">Nome</label>
+                    <input type="text" id="categoriaNome" />
+                </div>
+                <div class="divCategoriaTipo">
+                    <label for="categoriaTipo">Tipo</label>
+                    <select id="categoriaTipo">
+                        <option value="0">Despesa</option>
+                        <option value="1">Receita</option>
+                    </select>
+                </div>
+                <button id="btnNovaCategoria" onclick="novaCategoria()">Incluir</button>
+            </div>
+            <div class="divCategoriasTable">
+                <table id="tabelaCategoria">
+                    <thead>
+                        <tr>
+                            <th class="colunaCategoriaNome">Nome</th>
+                            <th class="colunaCategoriaTipo">Tipo</th>
+                            <th class="colunaCategoriaAcao">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

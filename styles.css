@@ -1,0 +1,255 @@
+/* Ajuste global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    outline: none;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Div de resumo */
+.resumo {
+    display: flex;
+    padding: 10px 0;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Sub-divs da div de resumo */
+.resumo>div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+}
+
+/* Div container dos inputs de Categoria */
+.novaCategoria {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Div container dos inputs de Lancamento */
+.novoLancamento {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Divs de cada input */
+.divCategoriaNome,
+.divCategoriaTipo,
+.divLancamentoDescricao,
+.divLancamentoCategoria,
+.divLancamentoData,
+.divLancamentoValor {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botão Incluir */
+.novaCategoria>button,
+.novoLancamento>button {
+    background-color: #2C73D2;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+}
+
+/* Espaço entre o texto e a caixa para os inputs */
+input,
+select {
+    padding: 5px;
+}
+
+/* Div das tabelas */
+.divCategoriasTable {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tabelas */
+table {
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+/* Cabeçalho das tabelas */
+th {
+    text-align: start;
+    border-bottom: inset lightseagreen;
+    padding-bottom: 5px;
+}
+
+/* Itálico */
+i {
+    font-size: 25px;
+}
+
+/* Display Receita */
+.receitas {
+    color: green;
+}
+
+/* Display Despesa */
+.despesas {
+    color: red;
+}
+
+/* Display Total */
+.total {
+    color: royalblue;
+}
+
+/* Opções de combobox - Receita */
+.optionReceita {
+    background-color: palegreen;
+}
+
+/* Opções de combobox - Despesa */
+.optionDespesa {
+    background-color: lightsalmon;
+}
+
+/* Ícone de apagar */
+.bx-trash:hover {
+    color: red;
+    transition: 0.2s;
+}
+
+/* Ícone de receita */
+.bx-right-top-arrow-circle {
+    color: green;
+}
+
+/* Ícone de despesa */
+.bx-right-down-arrow-circle {
+    color: red;
+}
+
+/* Botões de ícones */
+.btnIcone {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Coluna de ações - Lancamento */
+.colunaLancamentoAcao {
+    width: 40px;
+    text-align: center;
+}
+
+/* Coluna Valor do Lancamento */
+.colunaLancamentoValor {
+    width: 110px;
+    text-align: start;
+}
+
+/* Coluna Data do Lancamento */
+.colunaLancamentoData {
+    width: 110px;
+    text-align: start;
+}
+
+/* Coluna Categoria do Lancamento */
+.colunaLancamentoCategoria {
+    width: 190px;
+    text-align: start;
+}
+
+/* Coluna Descrição do Lancamento */
+.colunaLancamentoDescricao {
+    width: 190px;
+    text-align: start;
+}
+
+/* Coluna de ações - Categoria */
+.colunaCategoriaAcao {
+    width: 40px;
+    text-align: center;
+}
+
+/* Botões dentro da coluna de ações - Categoria */
+.colunaCategoriaAcao>button {
+    background: transparent;
+    border: none;
+}
+
+/* Coluna Tipo da Categoria */
+.colunaCategoriaTipo {
+    width: 40px;
+    text-align: center;
+}
+
+/* Coluna Nome da Categoria */
+.colunaCategoriaNome {
+    width: 100px;
+    text-align: start;
+}
+
+/* Tabs */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 100px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* Botões das tabs */
+.tab button {
+    background-color: inherit;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+/* Troca cor de background dos botões */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Classe da tab ativa */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Conteúdo das tabs */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
